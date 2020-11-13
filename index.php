@@ -17,7 +17,7 @@
         // Close curl resource to free up system resources 
         curl_close($ch);      
 */
-
+/*
         $APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzEzi8i6Vo5-Inq_0eFX25MSDx0ragPHgnRrZPOKr0Z0QRPMno/exec';
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $APPS_SCRIPT_URL); 
@@ -26,6 +26,6 @@
         curl_setopt($ch, CURLOPT_TIMEOUT, 20);
         $content = trim(curl_exec($ch));
         curl_close($ch);    
-        echo $content;      
+        echo $content;     */ 
         echo "a";
 ?> 
