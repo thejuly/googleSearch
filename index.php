@@ -41,7 +41,7 @@
         curl_close($ch);      
 */
 
-        $APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzEzi8i6Vo5-Inq_0eFX25MSDx0ragPHgnRrZPOKr0Z0QRPMno/exec';
+        $APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwhjwq4JhNcLqm-9gYeOKh3Glz8v-etLiuylfMHepI/dev?search=AIR%20REQUIREMENT%20LIST';
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $APPS_SCRIPT_URL); 
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
