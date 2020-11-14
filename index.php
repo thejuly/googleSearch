@@ -88,12 +88,15 @@ if ($_POST["MM_insert"] == "form1" && $_POST["url"] <> "" && $_POST["size"] <> "
 	//echo "Your data: ".$url."<br>";
 	//echo "Your size: ".$size;
         
-        ///////// Start curl //////////
+        /////////////////////////// Start curl ////////////////////////////
         $ch = curl_init(); 
   
         // set url 
         //curl_setopt($ch, CURLOPT_URL, "http://10.29.81.199/notify/chk_cogent.php"); 
-        curl_setopt($ch, CURLOPT_URL, "https://script.google.com/macros/s/AKfycbwhjwq4JhNcLqm-9gYeOKh3Glz8v-etLiuylfMHepI/dev?search=AIR"); 
+        //$APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzEzi8i6Vo5-Inq_0eFX25MSDx0ragPHgnRrZPOKr0Z0QRPMno/exec?search=AIR';
+        $APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwhjwq4JhNcLqm-9gYeOKh3Glz8v-etLiuylfMHepI/dev?search=AIR%20REQUIREMENT%20LIST';
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $APPS_SCRIPT_URL); 
   
         // Return the transfer as a string 
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
@@ -104,9 +107,10 @@ if ($_POST["MM_insert"] == "form1" && $_POST["url"] <> "" && $_POST["size"] <> "
   
         // Close curl resource to free up system resource
         curl_close($ch);  
-         ///////// End curl //////////
+         /////////////////////////// End curl ////////////////////////////
 
 
+/*
         ///////// Start Google search ///////////
         $myArray = ['testAppScript : Link = https://script.google.com/d/1n25Cu_wHLnCIjxvNttN4TF6MCb5lWTyF1fk0W6JfFMMOUXZwbfL4yfp1/edit?usp=drivesdk' ,'Turbo Sulzer .pdf : Link = https://drive.google.com/file/d/149viLe0Em9jCDiL-Di8GqhFe9BxCB5zq/view?usp=drivesdk', '01_AR9607091A-01.pdf : Link = https://drive.google.com/file/d/19Se6thvcNLp0UZEL2bFN_LgCS4V3pz_k/view?usp=drivesdk'];
         
@@ -134,7 +138,8 @@ if ($_POST["MM_insert"] == "form1" && $_POST["url"] <> "" && $_POST["size"] <> "
 
         echo "</div>";
         ///////// End Google search ///////////
-        
+  */
+
         
 }
 ?>
