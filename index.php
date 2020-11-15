@@ -87,13 +87,30 @@ $size = "300";
 //echo $_POST["size"]."<br>";
 if ($_POST["MM_insert"] == "form1" && $_POST["url"] <> "" && $_POST["size"] <> "") {
 	$post_url = $_POST["url"];
-    $post_size = $_POST["size"];
-    
-    echo "Your Keyword is: ".$post_url."<br>";
-	$post_url = str_replace(" ","%20",$post_url);
+        $post_size = $_POST["size"];
+        
+        echo "Your Keyword is: ".$post_url."<br>";
+        //$post_url = str_replace(" ","%20",$post_url);
+        $post_url = rawurlencode($post_url); 
 	
-	//echo "Your size: ".$post_size."<br>";;
-    echo "<br>";
+        //echo "Your size: ".$post_size."<br>";;
+        echo "<br>";
+
+        //////////////////////////////////////////////////////////////////////////////////////
+        /*$str = 'Welcome to Mindphp.com '; 
+
+        // Encode the given string 
+        $encode_str = rawurlencode($str); 
+        echo "Encoded string: " . $encode_str . "<br>"; 
+
+        // Decode the encoded string 
+        $decode_str = rawurldecode($encode_str); 
+        echo "Decodec string: " . $decode_str; */
+        //////////////////////////////////////////////////////////////////////////////////////
+
+
+
+    
 
 
         /////////////////////////// Start curl ////////////////////////////
@@ -120,6 +137,8 @@ if ($_POST["MM_insert"] == "form1" && $_POST["url"] <> "" && $_POST["size"] <> "
         curl_close($curl);
 
         $txt_split = explode(",",$response);
+
+        
         //print_r($txt_split);
         //echo $txt_split[0];
         //echo "<br>";
