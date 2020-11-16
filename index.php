@@ -117,11 +117,14 @@ if ($_POST["MM_insert"] == "form1" && $_POST["url"] <> "" && $_POST["size"] <> "
         /////////////////////////// Start curl ////////////////////////////
 
         //The URL we are connecting to.
-        //Document center by:weera => 'https://script.google.com/macros/s/AKfycbz7MbwUuozEpwhlq14pd63RwSS_TYbQ__miUgEYkvo2ZT8XtwDX/exec?search=' . $post_url;
-        //myLogbook by:thongpoon => $url = 'https://script.google.com/macros/s/AKfycbzEzi8i6Vo5-Inq_0eFX25MSDx0ragPHgnRrZPOKr0Z0QRPMno/exec?search=' . $post_url;
-        $url = 'https://script.google.com/macros/s/AKfycbz7MbwUuozEpwhlq14pd63RwSS_TYbQ__miUgEYkvo2ZT8XtwDX/exec?search=' . $post_url;
         //$url = 'https://script.google.com/macros/s/AKfycbzEzi8i6Vo5-Inq_0eFX25MSDx0ragPHgnRrZPOKr0Z0QRPMno/exec?search=AIR%20REQUIREMENT%20LIST';
         //$url = 'https://script.google.com/macros/s/AKfycbwhjwq4JhNcLqm-9gYeOKh3Glz8v-etLiuylfMHepI/dev?search=AIR%20REQUIREMENT%20LIST';
+
+        //Document center by:weera => 'https://script.google.com/macros/s/AKfycbz7MbwUuozEpwhlq14pd63RwSS_TYbQ__miUgEYkvo2ZT8XtwDX/exec?search=' . $post_url;
+        //myLogbook by:thongpoon => $url = 'https://script.google.com/macros/s/AKfycbzEzi8i6Vo5-Inq_0eFX25MSDx0ragPHgnRrZPOKr0Z0QRPMno/exec?search=' . $post_url;
+        $url = 'https://script.google.com/macros/s/AKfycbwPn8wirdu9PDpSn1E5rC-Odrlj0FX2z9YjhNKO6AUxv8JyZ3E/exec?search=' . $post_url;
+        
+
 
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, $url);
