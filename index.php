@@ -54,7 +54,7 @@
         </div>
         <div class="form-group">
           <div class="col-sm-12">
-           <input type="number" name="size" class="form-control" min="50" max="300" placeholder="Spare (Not use)" value="50" />
+           <!--<input type="number" name="size" class="form-control" min="50" max="300" placeholder="Spare (Not use)" value="50" />-->
            <!--<input type="number" name="size" class="form-control" min="50" max="300"required placeholder="50-300" />-->
            
           </div>
@@ -85,6 +85,7 @@
 $size = "300";
 //echo $_POST["url"]."<br>";
 //echo $_POST["size"]."<br>";
+$_POST["size"] = "xx";
 if ($_POST["MM_insert"] == "form1" && $_POST["url"] <> "" && $_POST["size"] <> "") {
 	$post_url = $_POST["url"];
         $post_size = $_POST["size"];
@@ -116,7 +117,9 @@ if ($_POST["MM_insert"] == "form1" && $_POST["url"] <> "" && $_POST["size"] <> "
         /////////////////////////// Start curl ////////////////////////////
 
         //The URL we are connecting to.
-        $url = 'https://script.google.com/macros/s/AKfycbzEzi8i6Vo5-Inq_0eFX25MSDx0ragPHgnRrZPOKr0Z0QRPMno/exec?search=' . $post_url;
+        //Document center by:weera => 'https://script.google.com/macros/s/AKfycbz7MbwUuozEpwhlq14pd63RwSS_TYbQ__miUgEYkvo2ZT8XtwDX/exec?search=' . $post_url;
+        //myLogbook by:thongpoon => $url = 'https://script.google.com/macros/s/AKfycbzEzi8i6Vo5-Inq_0eFX25MSDx0ragPHgnRrZPOKr0Z0QRPMno/exec?search=' . $post_url;
+        $url = 'https://script.google.com/macros/s/AKfycbz7MbwUuozEpwhlq14pd63RwSS_TYbQ__miUgEYkvo2ZT8XtwDX/exec?search=' . $post_url;
         //$url = 'https://script.google.com/macros/s/AKfycbzEzi8i6Vo5-Inq_0eFX25MSDx0ragPHgnRrZPOKr0Z0QRPMno/exec?search=AIR%20REQUIREMENT%20LIST';
         //$url = 'https://script.google.com/macros/s/AKfycbwhjwq4JhNcLqm-9gYeOKh3Glz8v-etLiuylfMHepI/dev?search=AIR%20REQUIREMENT%20LIST';
 
