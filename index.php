@@ -55,7 +55,7 @@
         <div class="form-group">
           <div class="col-sm-12">
            <!--<input type="number" name="size" class="form-control" min="50" max="300" placeholder="Spare (Not use)" value="50" />-->
-           <input type="text" name="size" class="form-control"  placeholder="Document type" />
+           <input type="text" name="size" class="form-control"  placeholder="Document Type (PDF, JPG, PNG)" />
            
           </div>
         </div>
@@ -125,8 +125,9 @@ $size = "300";
 
         //Document center by:weera => 'https://script.google.com/macros/s/AKfycbz7MbwUuozEpwhlq14pd63RwSS_TYbQ__miUgEYkvo2ZT8XtwDX/exec?search=' . $post_url;
         //myLogbook by:thongpoon => $url = 'https://script.google.com/macros/s/AKfycbzEzi8i6Vo5-Inq_0eFX25MSDx0ragPHgnRrZPOKr0Z0QRPMno/exec?search=' . $post_url;
-        $url = 'https://script.google.com/macros/s/AKfycbwPn8wirdu9PDpSn1E5rC-Odrlj0FX2z9YjhNKO6AUxv8JyZ3E/exec?search=' . $post_url . "search2=" . $post_size;
-        //$rul = 'https://script.google.com/macros/s/AKfycbwPn8wirdu9PDpSn1E5rC-Odrlj0FX2z9YjhNKO6AUxv8JyZ3E/exec';
+        $url = 'https://script.google.com/macros/s/AKfycbwPn8wirdu9PDpSn1E5rC-Odrlj0FX2z9YjhNKO6AUxv8JyZ3E/exec?search=' . $post_url . "&search2=" . $post_size;
+
+        //echo $url . "<br>";
 
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, $url);
