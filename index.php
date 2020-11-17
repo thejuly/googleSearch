@@ -55,7 +55,7 @@
         <div class="form-group">
           <div class="col-sm-12">
            <!--<input type="number" name="size" class="form-control" min="50" max="300" placeholder="Spare (Not use)" value="50" />-->
-           <!--<input type="number" name="size" class="form-control" min="50" max="300"required placeholder="50-300" />-->
+           <input type="text" name="size" class="form-control"  placeholder="Document type" />
            
           </div>
         </div>
@@ -85,16 +85,19 @@
 $size = "300";
 //echo $_POST["url"]."<br>";
 //echo $_POST["size"]."<br>";
-$_POST["size"] = "xx";
-if ($_POST["MM_insert"] == "form1" && $_POST["url"] <> "" && $_POST["size"] <> "") {
-	$post_url = $_POST["url"];
+//ST["size"] = "xx";
+//if ($_POST["MM_insert"] == "form1" && $_POST["url"] <> "" && $_POST["size"] <> "") {
+  if ($_POST["MM_insert"] == "form1" && $_POST["url"] <> "") {
+	      $post_url = $_POST["url"];
         $post_size = $_POST["size"];
         
         echo "Your Keyword is: ".$post_url."<br>";
         //$post_url = str_replace(" ","%20",$post_url);
         $post_url = rawurlencode($post_url); 
 	
-        //echo "Your size: ".$post_size."<br>";;
+        echo "Document type is: ".$post_size."<br>";;
+        $post_size = rawurlencode($post_size); 
+
         echo "<br>";
 
         //////////////////////////////////////////////////////////////////////////////////////
@@ -122,9 +125,8 @@ if ($_POST["MM_insert"] == "form1" && $_POST["url"] <> "" && $_POST["size"] <> "
 
         //Document center by:weera => 'https://script.google.com/macros/s/AKfycbz7MbwUuozEpwhlq14pd63RwSS_TYbQ__miUgEYkvo2ZT8XtwDX/exec?search=' . $post_url;
         //myLogbook by:thongpoon => $url = 'https://script.google.com/macros/s/AKfycbzEzi8i6Vo5-Inq_0eFX25MSDx0ragPHgnRrZPOKr0Z0QRPMno/exec?search=' . $post_url;
-        $url = 'https://script.google.com/macros/s/AKfycbwPn8wirdu9PDpSn1E5rC-Odrlj0FX2z9YjhNKO6AUxv8JyZ3E/exec?search=' . $post_url;
-        
-
+        $url = 'https://script.google.com/macros/s/AKfycbwPn8wirdu9PDpSn1E5rC-Odrlj0FX2z9YjhNKO6AUxv8JyZ3E/exec?search=' . $post_url . "search2=" . $post_size;
+        //$rul = 'https://script.google.com/macros/s/AKfycbwPn8wirdu9PDpSn1E5rC-Odrlj0FX2z9YjhNKO6AUxv8JyZ3E/exec';
 
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, $url);
@@ -156,6 +158,7 @@ if ($_POST["MM_insert"] == "form1" && $_POST["url"] <> "" && $_POST["size"] <> "
         ///////// Start Google search ///////////
         //$myArray = ['testAppScript : Link = https://script.google.com/d/1n25Cu_wHLnCIjxvNttN4TF6MCb5lWTyF1fk0W6JfFMMOUXZwbfL4yfp1/edit?usp=drivesdk' ,'Turbo Sulzer .pdf : Link = https://drive.google.com/file/d/149viLe0Em9jCDiL-Di8GqhFe9BxCB5zq/view?usp=drivesdk', '01_AR9607091A-01.pdf : Link = https://drive.google.com/file/d/19Se6thvcNLp0UZEL2bFN_LgCS4V3pz_k/view?usp=drivesdk'];
         
+        
         $myArray = $txt_split;
 
 
@@ -182,6 +185,7 @@ if ($_POST["MM_insert"] == "form1" && $_POST["url"] <> "" && $_POST["size"] <> "
 
 
         echo "</div>";
+        
         ///////// End Google search ///////////
   
 
