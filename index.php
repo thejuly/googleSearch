@@ -55,7 +55,7 @@
         <div class="form-group">
           <div class="col-sm-12">
            <!--<input type="number" name="size" class="form-control" min="50" max="300" placeholder="Spare (Not use)" value="50" />-->
-           <input type="text" name="size" class="form-control"  placeholder="Document Type (PDF, JPG, PNG)" />
+           <input type="text" name="size" class="form-control"  placeholder="Document Type (PDF, JPG, PNG)" autocomplete="off"/>
            
           </div>
         </div>
