@@ -1,3 +1,7 @@
+www.github.com (User:dcsbailey21574@gmail.com Pass:Sxxxxxxxxxx4)
+
+www.heroku.com (User:dcsbailey21574@gmail.com Pass:Sxxxxxxxxxx4)
+
 1. git init (only first time)
 2. git add .
 3. git remote -v
