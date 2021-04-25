@@ -1,0 +1,14 @@
+www.github.com (User:dcsbailey21574@gmail.com Pass:Sxxxxxxxxxx4)
+
+www.heroku.com (User:dcsbailey21574@gmail.com Pass:Sxxxxxxxxxx4)
+
+1. git init (only first time)
+2. git add .
+3. git remote -v
+4. git commit -m "aa"
+5. git remote add origin  https://github.com/thejuly/googleSearch.git 
+6. git push -u origin  main
+
+
+web page (heroku)
+https://github.com/thejuly/googleSearch.git 
